@@ -11,6 +11,7 @@ int main()
         for(int i=0; i<n; i++)
         {
             s[i]=0;
+            tys[i]=0;
             for(int j=0; j<3; j++)
             {
                 scanf("%d ",&m[i][j]);
@@ -19,12 +20,16 @@ int main()
         }
         for (int i=0,j=0;i<n-2;i++,j++)
         {
+
             tys[j]=s[i]+s[i+1]+s[i+2];
+
         }
+;
         best=tys[0];
         worst=tys[0];
         for(int i=0;i<n-2;i++)
         {
+            printf("%d ",tys[i]);
 
             if(tys[i]>best)
             {
